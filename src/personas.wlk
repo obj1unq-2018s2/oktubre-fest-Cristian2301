@@ -1,3 +1,7 @@
+import marcas.*
+import jarras.*
+import carpas.*
+
 class Persona {
 	var peso = 0
 	var jarrasCompradas = #{}
@@ -5,7 +9,11 @@ class Persona {
 	var aguante = 0
 	
 	method estaEbria(){
-		return (alcoholIngerido * peso) > aguante
+		return (self.alcoholIngerido() * peso) > aguante
+	}
+	
+	method alcoholIngerido(){
+		return jarrasCompradas.sum({jarra => jarra.marca().graduacion()})
 	}
 }
 
@@ -20,10 +28,10 @@ class Belga inherits Persona {
 
 class Checo inherits Persona {
 	
-//	
-//	method leGustaMarca(marca){
-//		return marca.
-//	}
+	
+	method leGustaMarca(marca){
+		return marca.graduacion() > 8
+	}
 }
 
 class Aleman inherits Persona {

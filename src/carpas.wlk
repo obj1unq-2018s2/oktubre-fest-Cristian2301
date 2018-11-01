@@ -3,6 +3,10 @@ class Carpa{
 	var bandaDeMusica = false
 	var jarrasCervezas = #{}
 	
-	method vender()
+	method vender(){}
+	
+	method marcaQueVende(){
+		return jarrasCervezas.first().marca()
+	}
 	
 }

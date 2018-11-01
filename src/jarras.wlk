@@ -1,6 +1,6 @@
 class Jarra {
-	var litros = 0
-	var marca
+	var property litros = 0
+	var property marca
 	
 	
 }
