@@ -1,0 +1,57 @@
+import carpas.*
+import jarras.*
+import marcas.*
+import personas.*
+
+describe "group of test" {
+	
+	var corona = new MarcaCervezaRubia()
+	var guiness = new MarcaCervezaNegra()
+	var hofbrau = new MarcaCervezaRoja()
+	var jarra1 = new Jarra()
+	var jarra2 = new Jarra()
+	var jarra3 = new Jarra()
+	var jurgen = new Aleman()
+	var schevko = new Checo()
+	var carpa1 = new Carpa()
+	
+	fixture {
+		jarra1.marca(corona)
+		jarra1.litros(0.5)
+		corona.graduacion(0.08)
+		jarra2.marca(guiness)
+		jarra2.litros(1)
+		guiness.graduacionReglamentaria(0.10)
+		guiness.gramosLupuloPorLitro(3)
+		jurgen.comprarJarra(jarra1)
+		jurgen.comprarJarra(jarra2)
+		jurgen.peso(80)
+		jurgen.aguante(7)
+		schevko.comprarJarra(jarra2)
+		carpa1.genteAdmitida(50)
+		carpa1.ingresoDePersona(schevko)
+		carpa1.bandaDeMusica(true)
+		carpa1.jarrasDeCervezas(#{jarra3})
+		jarra3.litros(1.5)
+		jarra3.marca(corona)
+	}
+
+	test "test 1" {
+		assert.equals(0.04, jarra1.contenidoDeAlcohol())
+	}
+	
+	test "test 2"{
+		assert.equals(0.14, jurgen.alcoholIngerido())
+	}
+	
+	test "test 3"{
+		assert.that(jurgen.estaEbria())
+	}
+	
+	test "test 4"{
+		assert.that(jurgen.quiereEntrarA(carpa1))
+	}
+}
+
+
+

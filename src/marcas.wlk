@@ -4,20 +4,20 @@ import personas.*
 
 class Marca {
 	var property gramosLupuloPorLitro = 0
-	var pais
+	var property pais
 	
 }
 
 
 class MarcaCervezaRubia inherits Marca{
-	var property graduacion
+	var property graduacion = 0
 	
 }
 
 
 	
 class MarcaCervezaNegra inherits Marca{
-	var graduacionReglamentaria
+	var property graduacionReglamentaria = 0
 	
 //	method graduacion(jarra){
 //		return (graduacionReglamentaria.min((gramosLupuloPorLitro * jarra.litros()) * 2)  * 100) / jarra.litros()     //DUDAAA!!!!
