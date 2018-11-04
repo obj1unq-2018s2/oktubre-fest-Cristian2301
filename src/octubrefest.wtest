@@ -2,6 +2,7 @@ import carpas.*
 import jarras.*
 import marcas.*
 import personas.*
+import paises.*
 
 describe "group of test" {
 	
@@ -14,20 +15,25 @@ describe "group of test" {
 	var jurgen = new Aleman()
 	var schevko = new Checo()
 	var carpa1 = new Carpa()
+	var estadosUnidos = new Pais()
+	var alemania = new Pais()
 	
 	fixture {
 		jarra1.marca(corona)
 		jarra1.litros(0.5)
 		corona.graduacion(0.08)
+		corona.pais(estadosUnidos)
 		jarra2.marca(guiness)
 		jarra2.litros(1)
 		guiness.graduacionReglamentaria(0.10)
 		guiness.gramosLupuloPorLitro(3)
+		guiness.pais(alemania)
 		jurgen.comprarJarra(jarra1)
 		jurgen.comprarJarra(jarra2)
 		jurgen.peso(80)
 		jurgen.aguante(7)
 		jurgen.leGustaMusicaTradicional(true)
+		jurgen.pais(alemania)
 		schevko.comprarJarra(jarra2)
 		carpa1.genteAdmitida(5)
 		carpa1.ingresoDePersona(schevko)
@@ -66,7 +72,11 @@ describe "group of test" {
 //	}
 
 	test "test 8"{
-		assert.equals(, carpa1.cantEbriosEmpedernidos())
+		assert.equals(1, carpa1.cantEbriosEmpedernidos())
+	}
+	
+	test "test 9"{
+		assert.notThat(jurgen.esPatriota())
 	}
 }
 

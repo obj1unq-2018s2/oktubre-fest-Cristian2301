@@ -7,7 +7,7 @@ class Persona {
 	var jarrasCompradas = #{}
 	var property leGustaMusicaTradicional = false
 	var property aguante = 0
-	var pais
+	var property pais
 	
 	method jarrasCompradas(){
 		return jarrasCompradas
@@ -30,7 +30,7 @@ class Persona {
 			carpa.ingresoDePersona(self)
 		}
 		else{
-			assert.error("no puede ingresar")
+			self.error("no puede ingresar")
 		}
 	}
 	

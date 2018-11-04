@@ -29,7 +29,7 @@ class Carpa{
 	}
 	
 	method cantEbriosEmpedernidos(){
-		return personasEnCarpa.count({persona => persona.jarrasCompradas().all({jarra => jarra.litro() >= 1})})
+		return personasEnCarpa.count({persona => persona.jarrasCompradas().all({jarra => jarra.litros() >= 1})})
 	}
 	
 }
