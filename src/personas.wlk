@@ -2,7 +2,7 @@ import marcas.*
 import jarras.*
 import carpas.*
 
-class Persona {
+lass Persona {
 	var property peso = 0
 	var jarrasCompradas = #{}
 	var property leGustaMusicaTradicional = false

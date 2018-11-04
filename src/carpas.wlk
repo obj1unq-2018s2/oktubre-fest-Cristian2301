@@ -2,7 +2,7 @@ import jarras.*
 import marcas.*
 import personas.*
 
-class Carpa{
+lass Carpa{
 	var property genteAdmitida = 0 
 	var personasEnCarpa = #{}
 	var property bandaDeMusica = false

@@ -2,7 +2,7 @@ import jarras.*
 import carpas.*
 import personas.*
 
-class Marca {
+lass Marca {
 	var property gramosLupuloPorLitro = 0
 	var property pais
 	

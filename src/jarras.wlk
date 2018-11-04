@@ -3,7 +3,7 @@ import marcas.*
 import personas.*
 
 
-class Jarra {
+lass Jarra {
 	var property litros = 0
 	var property marca
 	
