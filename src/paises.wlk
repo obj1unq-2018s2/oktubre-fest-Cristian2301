@@ -1,4 +1,4 @@
 
-lass Pais {	
+class Pais {	
 	
 }

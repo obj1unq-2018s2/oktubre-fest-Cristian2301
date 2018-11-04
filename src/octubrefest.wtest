@@ -4,7 +4,7 @@ import marcas.*
 import personas.*
 import paises.*
 
-escribe "group of test" {
+describe "group of test" {
 	
 	var corona = new MarcaCervezaRubia()
 	var guiness = new MarcaCervezaNegra()
