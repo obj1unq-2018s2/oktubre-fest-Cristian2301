@@ -3,7 +3,7 @@ import marcas.*
 import personas.*
 
 class Carpa{
-	var genteAdmitida = 0 
+	var property genteAdmitida = 0 
 	var personasEnCarpa = #{}
 	var property bandaDeMusica = false
 	var property jarrasCervezas = #{}
@@ -17,7 +17,7 @@ class Carpa{
 	}
 	
 	method marcaQueVende(){
-		return jarrasCervezas.first().marca()
+		return jarrasCervezas.asList().first().marca()
 	}
 	
 	method dejaIngresarA(persona){

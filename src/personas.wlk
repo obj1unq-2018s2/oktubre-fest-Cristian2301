@@ -5,7 +5,7 @@ import carpas.*
 class Persona {
 	var property peso = 0
 	var jarrasCompradas = #{}
-	var leGustaMusicaTradicional = false
+	var property leGustaMusicaTradicional = false
 	var property aguante = 0
 	var pais
 	
@@ -26,7 +26,10 @@ class Persona {
 	}
 	
 	method ingresarA(carpa){
-		if(not carpa.puedeEntrar(self)){
+		if(carpa.puedeEntrar(self)){
+			carpa.ingresoDePersona(self)
+		}
+		else{
 			assert.error("no puede ingresar")
 		}
 	}

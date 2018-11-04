@@ -27,16 +27,17 @@ describe "group of test" {
 		jurgen.comprarJarra(jarra2)
 		jurgen.peso(80)
 		jurgen.aguante(7)
+		jurgen.leGustaMusicaTradicional(true)
 		schevko.comprarJarra(jarra2)
-		carpa1.genteAdmitida(50)
+		carpa1.genteAdmitida(5)
 		carpa1.ingresoDePersona(schevko)
 		carpa1.bandaDeMusica(true)
-		carpa1.jarrasDeCervezas(#{jarra3})
+		carpa1.jarrasCervezas(#{jarra3})
 		jarra3.litros(1.5)
 		jarra3.marca(corona)
 	}
 
-	test "test 1" {
+	test "test 1"{
 		assert.equals(0.04, jarra1.contenidoDeAlcohol())
 	}
 	
@@ -49,7 +50,23 @@ describe "group of test" {
 	}
 	
 	test "test 4"{
-		assert.that(jurgen.quiereEntrarA(carpa1))
+		assert.notThat(jurgen.quiereEntrarA(carpa1))
+	}
+	
+	test "test 5"{
+		assert.notThat(carpa1.dejaIngresarA(jurgen))
+	}
+	
+	test "test 6"{
+		assert.notThat(carpa1.puedeEntrar(jurgen))
+	}
+	
+//	test "test 7"{
+//		assert.equals("no puede ingresar", jurgen.ingresarA(carpa1))
+//	}
+
+	test "test 8"{
+		assert.equals(, carpa1.cantEbriosEmpedernidos())
 	}
 }
 
