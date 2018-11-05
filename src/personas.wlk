@@ -30,7 +30,7 @@ class Persona {
 			carpa.ingresoDePersona(self)
 		}
 		else{
-			self.error("no puede ingresar")
+			self.error("no puede ingresar a la carpa")
 		}
 	}
 	

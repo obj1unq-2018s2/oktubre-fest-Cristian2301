@@ -67,9 +67,9 @@ describe "group of test" {
 		assert.notThat(carpa1.puedeEntrar(jurgen))
 	}
 	
-//	test "test 7"{
-//		assert.equals("no puede ingresar", jurgen.ingresarA(carpa1))
-//	}
+	test "test 7"{
+		assert.throwsExceptionWithMessage("no puede ingresar a la carpa", {jurgen.ingresarA(carpa1)})
+	}
 
 	test "test 8"{
 		assert.equals(1, carpa1.cantEbriosEmpedernidos())
